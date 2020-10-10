@@ -20,6 +20,7 @@ else()
     FiltersModeling
     FiltersSources
     GUISupportQt
+    ImagingGeneral
     ImagingStatistics
     IOLegacy
     IOXML

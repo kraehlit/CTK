@@ -15,6 +15,7 @@ else()
       ChartsCore
       CommonCore
       CommonDataModel
+      CommonSystem
       FiltersCore
       FiltersGeneral
       FiltersModeling
