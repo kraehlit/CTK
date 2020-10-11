@@ -34,14 +34,6 @@
 #include <vtkRenderer.h>
 #include <vtkSmartPointer.h>
 #include <vtkSphereSource.h>
-#if CTK_USE_QVTKOPENGLWIDGET
-# if CTK_HAS_QVTKOPENGLNATIVEWIDGET_H
-#  include <QVTKOpenGLNativeWidget.h>
-# else
-#  include <QVTKOpenGLWidget.h>
-# endif
-#endif
-
 #include <vtkRenderWindow.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkSplineWidget2.h>
@@ -55,6 +47,7 @@
 #include "ctkVTKRenderViewEventTranslator.h"
 #include "ctkEventTranslatorPlayerWidget.h"
 #include "ctkWidgetsUtils.h"
+#include "ctkVTKWidgetsUtils.h"
 
 #include <pqTestUtility.h>
 #include <pqEventTranslator.h>
@@ -105,15 +98,7 @@ void screenshotAvailable(void* data)
 //-----------------------------------------------------------------------------
 int ctkVTKRenderViewEventTranslatorPlayerTest1(int argc, char * argv [] )
 {
-#if CTK_USE_QVTKOPENGLWIDGET
-# if CTK_HAS_QVTKOPENGLNATIVEWIDGET_H
-    QSurfaceFormat format = QVTKOpenGLNativeWidget::defaultFormat();
-# else 
-    QSurfaceFormat format = QVTKOpenGLWidget::defaultFormat();
-# endif
-    format.setSamples(0);
-    QSurfaceFormat::setDefaultFormat(format);
-#endif
+  ctk::vtkSetSurfaceDefaultFormat();
 
   QApplication app(argc, argv);
 
