@@ -28,8 +28,6 @@
 #include "ctkVTKSliceView.h"
 #include "ctkVTKWidgetsUtils.h"
 
-// VKT includes
-
 // STD includes
 #include <iostream>
 

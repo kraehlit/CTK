@@ -27,13 +27,13 @@
 #include "ctkVTKWidgetsUtils.h"
 
 // VTK includes
-#include <vtkSmartPointer.h>
 #include <vtkActor.h>
 #include <vtkCubeSource.h>
 #include <vtkPolyDataMapper.h>
 #include <vtkRenderer.h>
 #include <vtkRenderWindow.h>
 #include <vtkRenderWindowInteractor.h>
+#include <vtkSmartPointer.h>
 #include <vtkVersion.h>
 
 // STD includes

@@ -10,6 +10,14 @@ else()
   # VTK >= 8.90 defines VTK_MAJOR_VERSION
   set(VTK_VERSION_MAJOR ${VTK_MAJOR_VERSION})
 
+  set(_test_components)
+  if(BUILD_TESTING)
+    list(APPEND _test_components
+      TestingRendering
+      CommonSystem
+      )
+  endif()
+
   find_package(VTK
     COMPONENTS
       ChartsCore
@@ -34,8 +42,7 @@ else()
       ViewsInfovis
       WrappingPythonCore
       ViewsContext2D
-    OPTIONAL_COMPONENTS
-      TestingRendering
+      ${_test_components}
     )
 endif()
 

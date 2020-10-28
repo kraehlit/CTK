@@ -45,6 +45,7 @@
 #include "ctkVTKRenderView.h"
 #include "ctkVTKRenderViewEventPlayer.h"
 #include "ctkVTKRenderViewEventTranslator.h"
+#include "ctkVTKWidgetsUtils.h"
 #include "ctkEventTranslatorPlayerWidget.h"
 #include "ctkWidgetsUtils.h"
 #include "ctkVTKWidgetsUtils.h"

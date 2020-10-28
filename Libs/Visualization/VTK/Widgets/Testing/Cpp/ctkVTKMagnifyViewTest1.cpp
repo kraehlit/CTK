@@ -30,7 +30,6 @@
 
 // VTK includes
 #if CTK_USE_QVTKOPENGLWIDGET
-# include <QSurfaceFormat>
 # include <vtkGenericOpenGLRenderWindow.h>
 #endif
 #include <vtkNew.h>
